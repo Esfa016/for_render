@@ -28,7 +28,7 @@ const validateQueryParams = joi.object({
 })
 
 const validateGenere = joi.object({
-     genre: joi.string().required()
+     genre: joi.string().required().valid(...Object.values(allowedGenres))
 })
 
 module.exports = {
